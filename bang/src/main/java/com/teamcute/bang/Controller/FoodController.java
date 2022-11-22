@@ -19,7 +19,6 @@ import com.teamcute.bang.Service.FoodService;
 
 
 
-
 @RestController
 @RequestMapping("/food")
 public class FoodController {
