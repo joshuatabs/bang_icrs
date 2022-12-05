@@ -1,14 +1,12 @@
-package com.teamcute.bang.Service;
-
+package com.ruiz.bang.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.teamcute.bang.Entity.PaymentEntity;
-import com.teamcute.bang.Repository.PaymentRepository;
+import com.ruiz.bang.Entity.PaymentEntity;
+import com.ruiz.bang.Repository.PaymentRepository;
 
 @Service
 public class PaymentService {
@@ -28,8 +26,8 @@ public class PaymentService {
 	
 	//Read Payment by paymentID
 	public PaymentEntity findByPaymentID(int paymentID) {
-		if(pr.findbyPaymentID(paymentID) != null) {
-			return pr.findbyPaymentID(paymentID);
+		if(pr.findByPaymentID(paymentID) != null) {
+			return pr.findByPaymentID(paymentID);
 		}else {
 			return null;
 		}

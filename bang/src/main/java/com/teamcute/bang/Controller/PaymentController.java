@@ -1,8 +1,9 @@
-package com.teamcute.bang.Controller;
+package com.ruiz.bang.Controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,10 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.teamcute.bang.Entity.PaymentEntity;
-import com.teamcute.bang.Service.PaymentService;
-
-
+import com.ruiz.bang.Entity.PaymentEntity;
+import com.ruiz.bang.Service.PaymentService;
 
 @RestController
 @RequestMapping("/payment")
@@ -32,7 +31,7 @@ public class PaymentController {
 	}
 	
 	//Read All Payment Records
-	@GetMapping("/getAAllPayments")
+	@GetMapping("/getAllPayments")
 	public List<PaymentEntity> getPayments(){
 		return pserv.getPayments();
 	}
@@ -55,6 +54,7 @@ public class PaymentController {
 	}
 	
 	//DeletePayment
+	@DeleteMapping("/deletePayment")
 	public String deletePayment(@PathVariable int paymentID) {
 		return pserv.deletePayment(paymentID);
 	}
