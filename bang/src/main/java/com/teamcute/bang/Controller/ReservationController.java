@@ -23,7 +23,7 @@ public class ReservationController {
 	
 	@Autowired
 	ReservationService rtserv;
-	@GetMapping("/postReservations")
+	@PostMapping("/postReservations")
 	public ReservationEntity insertReservation(@RequestBody ReservationEntity reservation) {
 		return rtserv.insertReservation(reservation);
 	}
