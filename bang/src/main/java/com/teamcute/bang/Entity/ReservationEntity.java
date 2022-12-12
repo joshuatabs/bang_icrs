@@ -34,7 +34,7 @@ public class ReservationEntity {
 		return id;
 		
 	}
-	public String getRoomId() {
+	public String  getRoomId() {
 		return roomId;
 		
 	}
