@@ -37,7 +37,7 @@ public class PaymentController {
 	}
 	
 	//Read Payment by paymentID
-	@GetMapping("getPayment")
+	@GetMapping("/getPayment")
 	public PaymentEntity findByPaymentID(int paymentID) {
 		if(pserv.findByPaymentID(paymentID) != null) {
 			return pserv.findByPaymentID(paymentID);
@@ -54,7 +54,7 @@ public class PaymentController {
 	}
 	
 	//DeletePayment
-	@DeleteMapping("/deletePayment")
+	@DeleteMapping("/deletePayment/{paymentID}")
 	public String deletePayment(@PathVariable int paymentID) {
 		return pserv.deletePayment(paymentID);
 	}

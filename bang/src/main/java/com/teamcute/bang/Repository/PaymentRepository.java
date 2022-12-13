@@ -8,6 +8,6 @@ import com.ruiz.bang.Entity.PaymentEntity;
 @Repository
 public interface PaymentRepository extends JpaRepository<PaymentEntity, Integer> {
 	
-	PaymentEntity findByPaymentID(int paymentID);
+	PaymentEntity findBypaymentid(int paymentid);
 		
 }

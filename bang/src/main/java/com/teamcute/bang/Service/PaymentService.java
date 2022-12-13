@@ -25,9 +25,9 @@ public class PaymentService {
 	}
 	
 	//Read Payment by paymentID
-	public PaymentEntity findByPaymentID(int paymentID) {
-		if(pr.findByPaymentID(paymentID) != null) {
-			return pr.findByPaymentID(paymentID);
+	public PaymentEntity findByPaymentID(int paymentid) {
+		if(pr.findBypaymentid(paymentid) != null) {
+			return pr.findBypaymentid(paymentid);
 		}else {
 			return null;
 		}
@@ -57,9 +57,10 @@ public class PaymentService {
 	
 	//Delete Payment
 	public String deletePayment(int paymentID) {
+		
 		String msg;
 		
-		if(pr.findById(paymentID) != null) {
+		if(pr.findBypaymentid(paymentID) != null) {
 			
 			pr.deleteById(paymentID); //Find by paymentID
 			msg = "Payment with ID Number "+paymentID+ "has been successfully deleted!";
