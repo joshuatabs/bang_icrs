@@ -1,4 +1,4 @@
-package com.ruiz.bang.Entity;
+package com.teamcute.bang.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

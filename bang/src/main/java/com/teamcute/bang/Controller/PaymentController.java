@@ -1,4 +1,4 @@
-package com.ruiz.bang.Controller;
+package com.teamcute.bang.Controller;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ruiz.bang.Entity.PaymentEntity;
-import com.ruiz.bang.Service.PaymentService;
+import com.teamcute.bang.Entity.PaymentEntity;
+import com.teamcute.bang.Service.PaymentService;
 
 @RestController
 @RequestMapping("/payment")

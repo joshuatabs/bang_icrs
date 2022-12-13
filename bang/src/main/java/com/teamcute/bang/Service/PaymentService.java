@@ -1,12 +1,12 @@
-package com.ruiz.bang.Service;
+package com.teamcute.bang.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.ruiz.bang.Entity.PaymentEntity;
-import com.ruiz.bang.Repository.PaymentRepository;
+import com.teamcute.bang.Entity.PaymentEntity;
+import com.teamcute.bang.Repository.PaymentRepository;
 
 @Service
 public class PaymentService {
