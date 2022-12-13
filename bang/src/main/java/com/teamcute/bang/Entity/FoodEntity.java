@@ -13,17 +13,15 @@ public class FoodEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-    private int quantity;
     private float price;
     
     
     public FoodEntity() {}
 
 
-	public FoodEntity(String name, int quantity, float price) {
+	public FoodEntity(String name, float price) {
 		super();
 		this.name = name;
-		this.quantity = quantity;
 		this.price = price;
 	}
 
@@ -35,16 +33,6 @@ public class FoodEntity {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
 	}
 
 

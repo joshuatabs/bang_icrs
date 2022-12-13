@@ -43,7 +43,7 @@ public class FoodService {
     		 food = frepo.findById(id).get(); //findbyID() is a pre defined method
     		 //step 2 update the record
     		 food.setName(newFoodDetails.getName());
-    		 food.setQuantity(newFoodDetails.getQuantity());
+    		 food.setPrice(newFoodDetails.getPrice());
     		 //step 3
     		 return frepo.save(food);
     		 

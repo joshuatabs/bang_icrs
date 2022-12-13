@@ -1,9 +1,13 @@
 package com.teamcute.bang.Entity;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -14,20 +18,25 @@ public class OrderEntity {
     private int orderid;
     private int customerid;
     private int orderdate;
-    private int foodid;
+    
+    @OneToMany(cascade = CascadeType.MERGE)
+    private Set<FoodEntity> food;
     
 	public OrderEntity() {
 		//default
 	}
-    public OrderEntity(int orderid, int customerid, int orderdate, int foodid) {
+   
+    
+    public OrderEntity(int orderid, int customerid, int orderdate, Set<FoodEntity> food) {
 		super();
 		this.orderid = orderid;
 		this.customerid = customerid;
 		this.orderdate = orderdate;
-		this.foodid = foodid;
+		this.food = food;
 	}
-    
-    public int getOrderid() {
+
+
+	public int getOrderid() {
         return orderid;
     }
     public void setOrderid(int orderid) {
@@ -45,11 +54,13 @@ public class OrderEntity {
     public void setOrderdate(int orderdate) {
         this.orderdate = orderdate;
     }
-    public int getFoodid() {
-        return foodid;
-    }
-    public void setFoodid(int foodid) {
-        this.foodid = foodid;
-    }
+
+	public Set<FoodEntity> getFood() {
+		return food;
+	}
+
+	public void setFood(Set<FoodEntity> food) {
+		this.food = food;
+	}
     
 }
