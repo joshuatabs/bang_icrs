@@ -44,11 +44,10 @@ public class PaymentService {
 		
 			//Update Record
 			payment.setType(newPaymentDetails.getType());
-			
+			payment.setAmount(newPaymentDetails.getAmount());
 			
 			//Save
 			return pr.save(payment);
-			
 			
 		}catch(NoSuchElementException nex) {
 			throw new Exception("ID Number "+ paymentID + " does not exist!");

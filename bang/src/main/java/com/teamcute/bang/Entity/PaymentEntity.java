@@ -25,9 +25,7 @@ public class PaymentEntity {
 	@Column(name = "created_date")
 	private String createdDate;
 	
-	
 	public PaymentEntity(){}
-
 
 	public PaymentEntity(int paymentID, String type, String amount) {
 		super();
@@ -45,7 +43,6 @@ public class PaymentEntity {
 		return createdDate;
 	}
 
-
 	public int getPaymentID() {
 		return paymentid;
 	}
@@ -54,11 +51,9 @@ public class PaymentEntity {
 		this.paymentid = paymentID;
 	}
 
-
 	public String getType() {
 		return type;
 	}
-
 
 	public void setType(String type) {
 		this.type = type;
@@ -71,7 +66,5 @@ public class PaymentEntity {
 	public String getAmount() {
 		return amount;
 	}
-	
-	
 	
 }

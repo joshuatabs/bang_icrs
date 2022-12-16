@@ -24,7 +24,7 @@ public class VenueService {
 	public VenueEntity newVenue(VenueEntity venue, PaymentEntity payment) {
 		
 		pr.save(payment);
-		venue.setPaymentid(payment.getPaymentID());
+		venue.setPayment(payment);
 		
 		return vr.save(venue);
 		
@@ -32,6 +32,7 @@ public class VenueService {
 	
 	//Read Venues
 	public List<VenueEntity> getVenues(){
+		
 		return vr.findAll();
 	}
 	
@@ -60,12 +61,12 @@ public class VenueService {
 		
 		VenueEntity venue = vr.findById(venueid).get();
 		
-		int paymentid = venue.getPaymentid();
+		PaymentEntity payment = venue.getPayment();
 		
 		if(vr.findByvenueid(venueid) != null){
 			
 			vr.deleteById(venueid);
-			pr.deleteById(paymentid);
+			pr.deleteById(payment.getPaymentID());
 			
 			msg = "Venue Reservation Number " +venueid+ " has been successfully deleted!";
 			

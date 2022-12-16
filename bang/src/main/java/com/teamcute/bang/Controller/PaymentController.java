@@ -3,6 +3,7 @@ package com.teamcute.bang.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.teamcute.bang.Entity.PaymentEntity;
 import com.teamcute.bang.Service.PaymentService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {
@@ -45,7 +47,6 @@ public class PaymentController {
 			return null;
 		}
 	}
-	
 	
 	//Update Payment
 	@PutMapping("/updatePayment")
