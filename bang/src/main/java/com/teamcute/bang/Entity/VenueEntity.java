@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "tbl_venue")
 public class VenueEntity {
@@ -18,19 +17,19 @@ public class VenueEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int venueid;
 	
-	private int paymentid;
-	
 	@Column(name = "date")
 	private String date;
 	
-	
+    @ManyToOne
+    @JoinColumn(name="paymentid")
+    PaymentEntity payment;
 	
 	public VenueEntity() {}
 	
-	public VenueEntity(int venueid, int paymentid, String date) {
+	public VenueEntity(int venueid, PaymentEntity payment, String date) {
 		super();
 		this.venueid = venueid;
-		this.paymentid = paymentid;
+		this.payment = payment;
 		this.date = date;
 	}
 
@@ -43,12 +42,12 @@ public class VenueEntity {
 		return venueid;
 	}
 
-	public int getPaymentid() {
-		return paymentid;
+	public PaymentEntity getPayment() {
+		return payment;
 	}
 
-	public void setPaymentid(int paymentid) {
-		this.paymentid = paymentid;
+	public void setPayment(PaymentEntity payment) {
+		this.payment = payment;
 	}
 
 	public String getDate() {

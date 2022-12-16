@@ -16,6 +16,7 @@ import com.teamcute.bang.Entity.PaymentEntity;
 import com.teamcute.bang.Entity.VenueEntity;
 import com.teamcute.bang.Service.VenueService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/venue")
 public class VenueController {

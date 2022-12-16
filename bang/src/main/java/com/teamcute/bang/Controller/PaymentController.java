@@ -46,7 +46,6 @@ public class PaymentController {
 		}
 	}
 	
-	
 	//Update Payment
 	@PutMapping("/updatePayment")
 	public PaymentEntity updatePayment(@RequestParam int paymentID, @RequestBody PaymentEntity newPaymentDetails) throws Exception{
