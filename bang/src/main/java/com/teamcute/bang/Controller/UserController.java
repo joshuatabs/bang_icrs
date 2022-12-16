@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.teamcute.bang.Entity.UserEntity;
-import com.teamcute.bang.Service.FoodService;
 import com.teamcute.bang.Service.UserService;
 
 

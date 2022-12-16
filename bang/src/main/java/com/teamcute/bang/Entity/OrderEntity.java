@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -16,25 +18,23 @@ public class OrderEntity {
 	@Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int orderid;
-    private int customerid;
     private int orderdate;
-    
-    @OneToMany(cascade = CascadeType.MERGE)
-    private Set<FoodEntity> food;
+    private double total;
+    @ManyToOne
+	@JoinColumn(name = "userid")
+    UserEntity user;
     
 	public OrderEntity() {
 		//default
 	}
-   
-    
-    public OrderEntity(int orderid, int customerid, int orderdate, Set<FoodEntity> food) {
+  
+	public OrderEntity(int orderid, int orderdate, double total, UserEntity user) {
 		super();
 		this.orderid = orderid;
-		this.customerid = customerid;
 		this.orderdate = orderdate;
-		this.food = food;
+		this.total = total;
+		this.user = user;
 	}
-
 
 	public int getOrderid() {
         return orderid;
@@ -42,12 +42,7 @@ public class OrderEntity {
     public void setOrderid(int orderid) {
         this.orderid = orderid;
     }
-    public int getCustomerid() {
-        return customerid;
-    }
-    public void setCustomerid(int customerid) {
-        this.customerid = customerid;
-    }
+
     public int getOrderdate() {
         return orderdate;
     }
@@ -55,12 +50,21 @@ public class OrderEntity {
         this.orderdate = orderdate;
     }
 
-	public Set<FoodEntity> getFood() {
-		return food;
+	public double getTotal() {
+		return total;
 	}
 
-	public void setFood(Set<FoodEntity> food) {
-		this.food = food;
+	public void setTotal(double total) {
+		this.total = total;
 	}
-    
+
+	public UserEntity getUser() {
+		return user;
+	}
+
+	public void setUser(UserEntity user) {
+		this.user = user;
+	}
+
+ 
 }
