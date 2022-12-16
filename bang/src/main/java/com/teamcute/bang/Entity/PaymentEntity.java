@@ -14,19 +14,15 @@ public class PaymentEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int paymentid;
 	
-	private int orderid;
-	private int reservationid;
 	private String type;
 	
 	
 	public PaymentEntity(){}
 
 
-	public PaymentEntity(int paymentID, int orderID, int reservationID, String type) {
+	public PaymentEntity(int paymentID, String type) {
 		super();
 		this.paymentid = paymentID;
-		orderid = orderID;
-		reservationid = reservationID;
 		this.type = type;
 	}
 
@@ -38,26 +34,6 @@ public class PaymentEntity {
 
 	public void setPaymentID(int paymentID) {
 		this.paymentid = paymentID;
-	}
-
-
-	public int getOrderID() {
-		return orderid;
-	}
-
-
-	public void setOrderID(int orderID) {
-		orderid = orderID;
-	}
-
-
-	public int getReservationID() {
-		return reservationid;
-	}
-
-
-	public void setReservationID(int reservationID) {
-		reservationid = reservationID;
 	}
 
 
