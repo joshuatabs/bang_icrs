@@ -14,15 +14,41 @@ public class FoodEntity {
 	private int id;
 	private String name;
     private float price;
+    private String description;
     
     
     public FoodEntity() {}
 
 
-	public FoodEntity(String name, float price) {
+	public FoodEntity(String name, float price, int id, String description) {
 		super();
+		this.description = description;
+		this.id = id;
 		this.name = name;
 		this.price = price;
+	}
+
+
+	
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 
