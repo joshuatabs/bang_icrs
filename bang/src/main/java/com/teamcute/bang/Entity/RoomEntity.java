@@ -17,14 +17,22 @@ public class RoomEntity {
 	private int roomid;
 	
 	private String code;
-	private int floor;
+	private String floor;
 	
 	public RoomEntity() {}
 
-	public RoomEntity(int roomid, String code, int floor) {
+	public RoomEntity(int roomid, String floor, String code) {
 		super();
 		this.roomid = roomid;
+		this.floor = floor;
 		this.code = code;
+	}
+
+	public String getFloor() {
+		return floor;
+	}
+
+	public void setFloor(String floor) {
 		this.floor = floor;
 	}
 
@@ -43,13 +51,4 @@ public class RoomEntity {
 	public void setCode(String code) {
 		this.code = code;
 	}
-
-	public int getFloor() {
-		return floor;
-	}
-
-	public void setFloor(int floor) {
-		this.floor = floor;
-	}
-	
 }
