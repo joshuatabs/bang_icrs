@@ -24,9 +24,9 @@ public class ReservationService {
 	public List<ReservationEntity> getAllReservations(){
 		return rtrepo.findAll();
 	}
-	public ReservationEntity findByRoomId (String roomid) {
-		if(rtrepo.findByRoomId(roomid) !=null)
-			return rtrepo.findByRoomId(roomid);
+	public ReservationEntity findByRoomId (int reservationid) {
+		if(rtrepo.findByreservationid(reservationid) !=null)
+			return rtrepo.findByreservationid(reservationid);
 		else
 			return null;
 	}

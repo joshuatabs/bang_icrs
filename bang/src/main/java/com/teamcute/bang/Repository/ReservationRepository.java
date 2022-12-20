@@ -9,7 +9,7 @@ import com.teamcute.bang.Entity.ReservationEntity;
 
 public interface ReservationRepository extends JpaRepository<ReservationEntity, Integer> {
 	
-	ReservationEntity findByRoomId(String roomid);
+	ReservationEntity findByreservationid(int reservationid);
 
 }
 

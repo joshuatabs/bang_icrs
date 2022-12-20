@@ -34,7 +34,7 @@ public class ReservationController {
 		return rtserv.getAllReservations();
 	}
 	@GetMapping("/getByRoomId")
-	public ReservationEntity findByRoomId(@RequestParam String roomid) {
+	public ReservationEntity findByRoomId(@RequestParam int roomid) {
 		return rtserv.findByRoomId(roomid);
 	}
 	
