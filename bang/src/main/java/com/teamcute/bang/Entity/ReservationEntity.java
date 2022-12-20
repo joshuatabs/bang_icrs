@@ -1,8 +1,6 @@
 package com.teamcute.bang.Entity;
 
 import java.sql.Date;
-import java.sql.Time;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
