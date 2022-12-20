@@ -3,7 +3,6 @@ package com.teamcute.bang.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,11 +40,6 @@ public class UserController {
 		
 	}
 	
-	@GetMapping("/getByFirstname")
-	public UserEntity findByFirstname(@RequestParam String firstname) { //used when a method passes a parameter as part of the request
-		return userv.findByFirstname(firstname);
-	}
-	
 	@PutMapping("/putUser")
 	public UserEntity putUser(@RequestParam int id,	@RequestBody UserEntity newUserDetails) throws Exception {
 		return userv.putUser(id, newUserDetails);
@@ -54,6 +48,12 @@ public class UserController {
 	@DeleteMapping("deleteUser/{id}")
 	public String deleteUser(@PathVariable int id) {
 		return userv.deleteUser(id);
+	}
+	
+	@CrossOrigin
+	@GetMapping("/findByUsername")
+	public UserEntity findByUsername(@RequestParam String username) {
+		return userv.findByUsername(username);
 	}
 	
 }

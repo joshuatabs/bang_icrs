@@ -29,15 +29,6 @@ public class UserService {
 			return urepo.findAll();
 			
 		}
-		//find by firstname
-		public UserEntity findByFirstname(String firstname) {
-			if (urepo.findByFirstname(firstname) != null) {
-				return urepo.findByFirstname(firstname);
-			}
-			else {
-				return null;
-			}
-		}
 		
 		//update student record
 		public UserEntity putUser(int id, UserEntity newUserDetails) throws Exception {
@@ -68,6 +59,14 @@ public class UserService {
 			}
 			
 			return msg;
+		}
+		
+		public UserEntity findByUsername(String username) {
+			if (urepo.findByUsername(username) != null){
+				return urepo.findByUsername(username);
+			} else {
+				return null;
+			}
 		}
 		
 }

@@ -7,5 +7,5 @@ import com.teamcute.bang.Entity.UserEntity;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {
-	UserEntity findByFirstname(String firstname);
+	UserEntity findByUsername(String username);
 }

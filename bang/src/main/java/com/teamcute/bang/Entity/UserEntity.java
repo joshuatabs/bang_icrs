@@ -16,25 +16,23 @@ public class UserEntity {
     private String password;
     private String firstname;
     private String lastname;
+    private String userType;
     private String email;
     
     public UserEntity(){
     	//default
     }
 
-	
-
-	public UserEntity(int userid, String username, String password, String firstname, String lastname, String email) {
+	public UserEntity(int userid, String username, String password, String firstname, String lastname, String email, String userType) {
 		super();
 		this.userid = userid;
 		this.username = username;
 		this.password = password;
 		this.firstname = firstname;
 		this.lastname = lastname;
+		this.userType = userType;
 		this.email = email;
 	}
-
-
 
 	public int getUserid() {
 		return userid;
@@ -90,6 +88,18 @@ public class UserEntity {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+
+
+	public String getUserType() {
+		return userType;
+	}
+
+
+
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
     
 	
